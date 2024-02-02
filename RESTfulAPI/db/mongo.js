@@ -29,5 +29,5 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-
-export default connectMongoDB; 
+export const userModel = mongoose.model('User', userSchema)
+export default connectMongoDB
