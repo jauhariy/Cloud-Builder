@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 
 import connectMongoDB from "./db/mongo.js";
 
-import usersRoutes from "./routers/users.js";
+import usersRoutes from "./routes/users.js";
 
 // importing an express application
 const app = express();
