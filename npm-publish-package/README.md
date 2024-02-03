@@ -2,7 +2,7 @@
 
 ``` Terminal
 npm install my-fancy-ultrainnovative-demo-package
-``
+```
 
 package contains a function hiThere(), which console logs a message from me.
 
