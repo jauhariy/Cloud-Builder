@@ -1,0 +1,14 @@
+{
+  "name": "michal-testing",
+  "version": "1.0.0",
+  "description": "Used to prepare for work on the Cloud Builder project.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michal Naklicki",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
