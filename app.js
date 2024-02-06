@@ -1,6 +1,35 @@
-var express = require('express');
+import express from "express";
+import mongoose from "mongoose";
+import * as path from 'path';
+import Sample from './model/Sample.js';
+
 var app = express();
-const path = require('path');
+var mongourl = "mongodb://localhost:27017/";
+
+// connect to mongodb
+
+async function mongodb_connect(){
+    try {
+        await mongoose.connect(mongourl);
+        console.log("Connected to MongoDB");
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+// create a sample entry
+
+async function write_something() {
+	const sampleEntry = await Sample.create({
+	  name: 'sample',
+	});
+
+	console.log(sampleEntry);
+}
+
+mongodb_connect();
+write_something();
 
 // code to serve any static pages in /pages/
 // redirect from non-existing "page" to index
@@ -23,3 +52,4 @@ app.get('*', (req, res) => {
 app.listen(3000, function() {
 	console.log('App is listening on port 3000');	
 });
+
